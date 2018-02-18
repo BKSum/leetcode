@@ -15,6 +15,9 @@ public class MoveZeroes {
     	//0 0 1
     	//0 1 0
     	//0 
+    	
+    	//check for 0 at current position
+    	//do not move pointer unless 0 is cleared
         for(int i=0; i<nums.length; i++) {
         	if(nums[i] == 0) {
         		for(int j=i;j<nums.length-1; j++) {
