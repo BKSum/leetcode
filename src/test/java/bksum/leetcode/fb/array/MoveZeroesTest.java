@@ -15,6 +15,7 @@ import org.junit.Test;
 public class MoveZeroesTest {
 
 	private MoveZeroes mz;
+	
 	/**
 	 * @throws java.lang.Exception
 	 */
