@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ AddBinaryTest.class, MoveZeroesTest.class })
-public class AllTests {
+@SuiteClasses({ AddBinaryTest.class, MoveZeroesTest.class, RainWaterTest.class})
+public class ArrayTestSuite {
 
 }
