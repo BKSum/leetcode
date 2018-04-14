@@ -1,7 +1,6 @@
 package bksum.leetcode.fb.array;
 
 public class Palindrome {
-    private static final boolean DEBUG = true;
 
     public boolean isPalindrome(String s) {
         s = s.toLowerCase();
