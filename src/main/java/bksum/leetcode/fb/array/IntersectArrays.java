@@ -31,7 +31,7 @@ public class IntersectArrays {
 		}
         int[] res = new int[intersectList.size()];
         for(int i = 0; i<res.length; i++){
-            res[i] = (Integer)intersectList.get(i);
+            res[i] = intersectList.get(i);
         }
 		return res;
 	}

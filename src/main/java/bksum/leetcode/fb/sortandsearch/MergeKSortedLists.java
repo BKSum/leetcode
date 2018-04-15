@@ -1,7 +1,6 @@
 package bksum.leetcode.fb.sortandsearch;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
