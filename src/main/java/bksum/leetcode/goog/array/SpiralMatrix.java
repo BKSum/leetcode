@@ -3,7 +3,7 @@ package bksum.leetcode.goog.array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpiralMatrix {
+class SpiralMatrix {
 
     private int traverseTop(List<Integer> spiralArrayList, int[][] matrix, int top, int left, int right){
         for(int i=left; i<=right; i++){
@@ -29,15 +29,15 @@ public class SpiralMatrix {
         return bottom;
     }
 
-    private int traverseBottom(List<Integer> spiralArrayList, int[][] matrix, int bottom, int right, int left){
-        for(int i=right; i>=left; i--){
-            spiralArrayList.add(matrix[bottom][i]);
+    private int traverseLeft(List<Integer> spiralArrayList, int[][] matrix, int left, int bottom, int top){
+        for(int i=bottom; i>=top; i--){
+            spiralArrayList.add(matrix[i][left]);
         }
-        bottom--;
-        return bottom;
+        left++;
+        return left;
     }
 
-    public List<Integer> spiralOrder(int[][] matrix) {
+    List<Integer> spiralOrder(int[][] matrix) {
         if(matrix.length<1){
             return(new ArrayList<>());
         }
@@ -50,13 +50,17 @@ public class SpiralMatrix {
         int right = column-1;
         List<Integer> spiralArrayList = new ArrayList<>(maxIntegers);
 
-        while(true){
+        while(spiralArrayList.size()<maxIntegers){
             top = traverseTop(spiralArrayList, matrix, top, left, right);
+            if(spiralArrayList.size()>=maxIntegers)
+                break;
             right = traverseRight(spiralArrayList, matrix, right, top, bottom);
+            if(spiralArrayList.size()>=maxIntegers)
+                break;
             bottom = traverseBottom(spiralArrayList, matrix, bottom, right, left);
-
-
-            break;
+            if(spiralArrayList.size()>=maxIntegers)
+                break;
+            left = traverseLeft(spiralArrayList, matrix, left, bottom, top);
         }
 
         return spiralArrayList;
