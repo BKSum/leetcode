@@ -2,19 +2,14 @@ package bksum.leetcode.goog.ip;
 
 public class RepeatedStringMatch {
     public int repeatedStringMatch(String A, String B) {
-        int counter = 1;
         StringBuilder sb = new StringBuilder(A);
-        while(!isSubString(sb.toString(),B)){
-            if(counter!=1 && sb.length() > (B.length() * 2)){
-                return -1;
-            }
+        int counter = 1;
+        while(sb.length()<B.length()){
             sb.append(A);
             counter++;
         }
-        return counter;
-    }
-
-    public boolean isSubString(String fullString, String subString){
-        return fullString.contains(subString);
+        if(sb.toString().contains(B)) return counter;
+        if(sb.append(A).toString().contains(B)) return counter+1;
+        return -1;
     }
 }

@@ -21,18 +21,4 @@ public class RepeatedStringMatchTest {
         assertEquals(rsm.repeatedStringMatch(strA, strB), 3);
     }
 
-    @Test
-    public void isSubString1() {
-        String strA = "abcd";
-        String strB = "cdabcdab";
-        assertFalse(rsm.isSubString(strA, strB));
-    }
-
-    @Test
-    public void isSubString2() {
-        String strA = "abcdabcdabcd";
-        String strB = "cdabcdab";
-        assertTrue(rsm.isSubString(strA, strB));
-    }
-
 }
