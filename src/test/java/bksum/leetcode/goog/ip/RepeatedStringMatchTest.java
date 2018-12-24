@@ -18,7 +18,7 @@ public class RepeatedStringMatchTest {
     public void repeatedStringMatch() {
         String strA = "abcd";
         String strB = "cdabcdab";
-        assertEquals(rsm.repeatedStringMatch(strA, strB), 3);
+        assertEquals(3, rsm.repeatedStringMatch(strA, strB));
     }
 
 }
