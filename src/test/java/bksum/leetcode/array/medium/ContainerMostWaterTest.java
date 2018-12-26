@@ -17,6 +17,6 @@ public class ContainerMostWaterTest {
     @Test
     public void maxArea() {
         int[] height = new int[] {1,8,6,2,5,4,8,3,7};
-        assertEquals(49, cmw.maxArea(height));
+        assertEquals(49, cmw.maxAreaBruteForce(height));
     }
 }
