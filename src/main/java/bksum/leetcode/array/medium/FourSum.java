@@ -9,12 +9,27 @@ import java.util.List;
  */
 class FourSum {
 
+    /**
+     * Runtime: 35 ms, faster than 79.48% of Java online submissions for 4Sum.
+     * @param nums
+     * @param target
+     * @return
+     */
     List<List<Integer>> fourSum(int[] nums, int target) {
         Arrays.sort(nums);
 
         List<List<Integer>> returnList = new ArrayList<>();
 
+        int tempFirstNum = 0;
+        boolean checkTempFirstNumInitialized = false;
+
         for(int i=0; i<nums.length; i++){
+            if(checkTempFirstNumInitialized && tempFirstNum == nums[i])
+                continue;
+            else {
+                checkTempFirstNumInitialized = true;
+                tempFirstNum = nums[i];
+            }
             int tempSecondaryNum = 0;
             boolean checkTempSecondaryNumInitialized = false;
             for(int j=i+1; j<nums.length; j++){
