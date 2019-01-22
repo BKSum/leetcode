@@ -20,7 +20,6 @@ public class NextPermutationTest {
         int[] expectedPermutation = new int[] {1,3,2};
         np.nextPermutation(input);
         assertArrayEquals(expectedPermutation, input);
-
     }
 
     @Test
@@ -29,6 +28,21 @@ public class NextPermutationTest {
         int[] expectedPermutation = new int[] {1,5,1};
         np.nextPermutation(input);
         assertArrayEquals(expectedPermutation, input);
+    }
 
+    @Test
+    public void nextPermutation_Test3() {
+        int[] input = {3,2,1};
+        int[] expectedPermutation = new int[] {1,2,3};
+        np.nextPermutation(input);
+        assertArrayEquals(expectedPermutation, input);
+    }
+
+    @Test
+    public void nextPermutation_Test4() {
+        int[] input = {1,3,2};
+        int[] expectedPermutation = new int[] {2,1,3};
+        np.nextPermutation(input);
+        assertArrayEquals(expectedPermutation, input);
     }
 }
