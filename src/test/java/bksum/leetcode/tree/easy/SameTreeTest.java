@@ -2,6 +2,7 @@ package bksum.leetcode.tree.easy;
 
 import org.junit.Before;
 import org.junit.Test;
+import bksum.leetcode.tree.TreeNode;
 
 import static org.junit.Assert.*;
 
